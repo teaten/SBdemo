@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.SBdemo.dao.StudentDao">
+	<select id="queryStudentByName" resultType="com.example.SBdemo.model.Student">
+		select id,name,sex,age,city
+		from student
+		where name=#{name}
+	</select>
+	
+	<delete id="delStduByName">
+		DELETE FROM student WHERE NAME = #{name}
+	</delete>
+</mapper>
