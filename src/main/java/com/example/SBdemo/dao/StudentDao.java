@@ -9,8 +9,10 @@ import com.example.SBdemo.model.Student;
 @Mapper
 public interface StudentDao {
 
-	List<Student> queryStudentByName(String name);
+	List<Student> selectStudentByName(String name);
 
 	void delStduByName(String name);
+
+	List<Student> readStudentBySex(String sex);
 
 }

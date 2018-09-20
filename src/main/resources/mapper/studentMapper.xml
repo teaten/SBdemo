@@ -3,10 +3,16 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.SBdemo.dao.StudentDao">
-	<select id="queryStudentByName" resultType="com.example.SBdemo.model.Student">
+	<select id="selectStudentByName" resultType="com.example.SBdemo.model.Student">
 		select id,name,sex,age,city
 		from student
 		where name=#{name}
+	</select>
+	
+	<select id="readStudentBySex" resultType="com.example.SBdemo.model.Student">
+		select id,name,sex,age,city
+		from student
+		where sex=#{sex}
 	</select>
 	
 	<delete id="delStduByName">

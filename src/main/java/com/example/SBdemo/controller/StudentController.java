@@ -31,4 +31,10 @@ public class StudentController {
 		List<Student> stuList = studService.queryByName(name);
 		return stuList;
 	}
+
+	@GetMapping("/queryBySex")
+	public Object getStudentBySex(@RequestParam("sex") String sex) {
+		List<Student> stuList = studService.getStudentBySex(sex);
+		return stuList;
+	}
 }

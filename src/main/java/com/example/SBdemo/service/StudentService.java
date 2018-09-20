@@ -14,7 +14,7 @@ public class StudentService {
 	private StudentDao stuDao;
 
 	public List<Student> queryByName(String name) {
-		List<Student> res = stuDao.queryStudentByName(name);
+		List<Student> res = stuDao.selectStudentByName(name);
 		if (res.isEmpty()) {
 			throw new RuntimeException("查无此人");
 		}
@@ -23,5 +23,9 @@ public class StudentService {
 
 	public void delStuByName(String name) {
 		stuDao.delStduByName(name);
+	}
+
+	public List<Student> getStudentBySex(String sex) {
+		return stuDao.readStudentBySex(sex);
 	}
 }

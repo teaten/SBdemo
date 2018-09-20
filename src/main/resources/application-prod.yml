@@ -1,6 +1,0 @@
-server:
-  port: 8082
-  servlet:
-    context-path: /demo 
-FirstSentense: "Hello World !"
-greeting: "你好,prod！,${FirstSentense}"
